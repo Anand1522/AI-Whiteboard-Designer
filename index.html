@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Whiteboard Designer | 30 Days 30 AI Websites - Day 23</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         Animated Background
+    ========================== -->
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✨
+            </div>
+
+            <div>
+                <h2>AI Whiteboard Designer</h2>
+                <p>Design • Brainstorm • Visualize</p>
+            </div>
+
+        </div>
+
+        <button id="themeBtn">
+            🌙
+        </button>
+
+    </header>
+
+    <!-- =========================
+         Hero
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="badge">
+            🚀 Day 23 • 30 Days 30 AI Websites Challenge
+        </div>
+
+        <h1>
+            AI Whiteboard Designer
+        </h1>
+
+        <p>
+
+            Transform your ideas into professional whiteboard layouts.
+            Enter your topic, choose your design style, and let AI generate
+            structured brainstorming boards, diagrams, flow layouts,
+            teaching boards, and mind maps.
+
+        </p>
+
+    </section>
+
+    <!-- =========================
+         Main Grid
+    ========================== -->
+
+    <main class="grid">
+
+        <!-- Left Panel -->
+
+        <section class="panel input-panel">
+
+            <div class="panel-title">
+                <h3>AI Controls</h3>
+                <p>Generate a smart whiteboard</p>
+            </div>
+
+            <div class="field">
+
+                <label>
+                    Whiteboard Topic
+                </label>
+
+                <textarea
+                    id="topic"
+                    placeholder="Example:
+Build an AI-powered Smart Attendance System for Colleges"></textarea>
+
+            </div>
+
+            <div class="two-column">
+
+                <div class="field">
+
+                    <label>Design Style</label>
+
+                    <select id="style">
+
+                        <option>Mind Map</option>
+                        <option>Flowchart</option>
+                        <option>Teaching Board</option>
+                        <option>Business Canvas</option>
+                        <option>Roadmap</option>
+                        <option>Architecture</option>
+                        <option>Brainstorm</option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Complexity</label>
+
+                    <select id="complexity">
+
+                        <option>Simple</option>
+                        <option selected>Medium</option>
+                        <option>Advanced</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="two-column">
+
+                <div class="field">
+
+                    <label>Theme</label>
+
+                    <select id="boardTheme">
+
+                        <option>Modern Blue</option>
+                        <option>Dark Glass</option>
+                        <option>Pastel</option>
+                        <option>Minimal</option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Node Count</label>
+
+                    <select id="nodes">
+
+                        <option>5</option>
+                        <option selected>8</option>
+                        <option>10</option>
+                        <option>12</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label>
+                    AI Goal
+                </label>
+
+                <input
+                    id="goal"
+                    type="text"
+                    placeholder="Explain the system clearly for beginners">
+
+            </div>
+
+            <div class="button-grid">
+
+                <button id="generateBtn" class="primary">
+                    ✨ Generate Board
+                </button>
+
+                <button id="randomBtn">
+                    🎲 Random Idea
+                </button>
+
+                <button id="clearBtn">
+                    🧹 Clear
+                </button>
+
+                <button id="downloadBtn">
+                    📄 Export
+                </button>
+
+            </div>
+
+            <!-- AI Stats -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h4 id="wordCount">
+                        0
+                    </h4>
+
+                    <p>
+                        Words
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h4 id="nodeCount">
+                        0
+                    </h4>
+
+                    <p>
+                        Nodes
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h4 id="timeCount">
+                        0s
+                    </h4>
+
+                    <p>
+                        AI Time
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Whiteboard -->
+
+        <section class="panel board-panel">
+
+            <div class="panel-title">
+
+                <h3>
+                    Generated Whiteboard
+                </h3>
+
+                <p>
+                    AI Visualization Canvas
+                </p>
+
+            </div>
+
+            <div id="board" class="board">
+
+                <div class="placeholder">
+
+                    <div class="placeholder-icon">
+                        🧠
+                    </div>
+
+                    <h2>
+                        Your AI Whiteboard
+                    </h2>
+
+                    <p>
+
+                        Enter a topic and click
+                        <strong>Generate Board</strong>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         Features
+    ========================== -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div>🧠</div>
+
+            <h4>AI Planning</h4>
+
+            <p>
+                Automatically structures complex ideas into organized layouts.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div>📊</div>
+
+            <h4>Visual Thinking</h4>
+
+            <p>
+                Converts brainstorming into professional whiteboard designs.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div>🎯</div>
+
+            <h4>Fast Learning</h4>
+
+            <p>
+                Great for presentations, students, startups, and teaching.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div>⚡</div>
+
+            <h4>Instant AI</h4>
+
+            <p>
+                Generates structured boards within seconds.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            AI Whiteboard Designer
+        </h3>
+
+        <p>
+
+            Built for the
+            <strong>30 Days • 30 AI Websites Challenge</strong>
+
+        </p>
+
+        <p>
+            Day 23 • HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
